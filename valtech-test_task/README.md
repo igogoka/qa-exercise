@@ -8,3 +8,5 @@ To run the test you need:
  
  To run tests for specific browser (chrome/firefox/edge) execute:
  - mvn clean test -Dbrowser=chrome; 
+ 
+ Test report - target/cucumber-reports/cucumber.html 
