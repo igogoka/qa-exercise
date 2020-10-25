@@ -94,4 +94,25 @@ public class NavigationSteps {
         partnersPage.printPartners();
     }
 
+    @And("I click on offices")
+    public void i_click_on_offices() {
+        homePage.clickOffices();
+    }
+
+    @And("I click on United Kingdom")
+    public void i_click_on_united_kingdom() {
+        officesPage = new OfficesPage(driver);
+        officesPage.ckickUnitedKingdom();
+    }
+
+    @Then("Verify count of offices in the UK")
+    public void verify_count_of_offices_in_the_uk() {
+        officesPage.verifyNumbersOfOffices();
+    }
+
+    @Then("Print a list of all offices in the UK")
+    public void print_a_list_of_all_offices_in_the_uk() {
+        officesPage.printUkOffices();
+    }
+
 }

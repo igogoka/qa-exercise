@@ -3,6 +3,7 @@ package com.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
@@ -26,7 +27,7 @@ public class HomePage extends BasePage {
 	private WebElement our_partners;
 
     public void checkPage() {
-        driver.getCurrentUrl().equals("https://www.valtech.com/en-gb/");
+        Assert.assertEquals (driver.getCurrentUrl(), "https://www.valtech.com/en-gb/");
     }
 
     public void acceptCookies() {
@@ -50,6 +51,11 @@ public class HomePage extends BasePage {
     public void openOurPartners() {
         waitForElement(our_partners);
         our_partners.click();
+    }
+
+    public void clickOffices() {
+        waitForElement(offices);
+        offices.click();
     }
 
 }
